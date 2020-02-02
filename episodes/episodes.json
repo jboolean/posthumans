@@ -1,0 +1,20 @@
+{
+  "tags": ["episode"],
+  "layout": "episode",
+
+  "title": "Posthumans",
+  "description": "To be determined",
+  "author": "Francesca Ferrando & Julian Boilen",
+  "copyright": "CC BY-NC 4.0 2020 Francesca Ferrando & Julian Boilen",
+  "categories": ["Philosophy", "Technology"],
+  "itunesCategory": [{
+    "text": "Society & Culture",
+    "subcats": [{"text": "Philosophy"}]
+  }, {
+    "text": "Technology"
+  }],
+  "itunesType": "episodic",
+  "itunesOwner": {"name": "Julian Boilen", "email": "julianboilen@gmail.com"},
+  "itunesExplicit": false,
+  "webMaster": "Julian Boilen"
+}

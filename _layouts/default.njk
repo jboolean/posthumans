@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site by Julian Boilen, julianboilen.com -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if (page.url === '/' or not title) %}
+    <title>{{ site.title }}</title>
+  {% else %}
+    <title>{{ title }} | {{ site.title }}</title>
+  {% endif %}
+  
+  {# <link rel="stylesheet" href="/assets/css/styles.css"> #}
+</head>
+<body>
+  <div id="root">
+    <div class="content">
+      {{ content | safe }}
+    </div>
+  </div>
+</body>
+</html>

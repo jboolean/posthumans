@@ -1,0 +1,20 @@
+{
+  "name": "posthumans",
+  "version": "1.0.0",
+  "description": "The posthumans podcast",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julian Boilen",
+  "license": "UNLICENCED",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  },
+  "dependencies": {
+    "podcast": "^1.1.0",
+    "striptags": "^3.1.1"
+  }
+}

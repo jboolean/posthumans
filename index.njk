@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<ol>
+{%- for episode in collections.episode -%}
+  <li><a href="{{ episode.url }}">{{ episode.data.title }}</li>
+{%- endfor -%}
+</ol>
+
+<a href="/feed.xml">Podcast feed</a>
