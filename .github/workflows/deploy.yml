@@ -22,6 +22,8 @@ jobs:
 
     - name: Build
       run: npm run build
+      env:
+        URL: http://posthumans.s3-website-us-east-1.amazonaws.com
       
     - name: Deploy
       uses: jboolean/s3-sync-action@master
