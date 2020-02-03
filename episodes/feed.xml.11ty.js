@@ -31,7 +31,7 @@ class FeedRenderer {
     
     data.collections.episode.forEach((episode) => {
       feed.addItem({
-        title: episode.title,
+        title: episode.data.title,
         description: episode.templateContent,
         itunesSummary: striptags(episode.templateContent),
         url: data.site.publicPath + episode.url,
