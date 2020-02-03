@@ -25,7 +25,7 @@ jobs:
     - name: Build
       run: npm run build
       env:
-        URL: http://posthumans.s3-website-us-east-1.amazonaws.com
+        URL: https://d20iws37zrcaba.cloudfront.net
       
     - name: Deploy
       uses: jboolean/s3-sync-action@master
@@ -37,3 +37,12 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'us-east-1'
         SOURCE_DIR: '_site'
+
+    - name: Invalidate Cloudfront
+      uses: chetan/invalidate-cloudfront-action@v1.2
+      env:
+        DISTRIBUTION: EK72UY5GCFQXQ
+        PATHS: '/*'
+        AWS_REGION: 'us-east-1'
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
