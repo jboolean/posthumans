@@ -1,5 +1,8 @@
 const util = require('util');
 
+const now = new Date();
+const isLive = p => p.date <= now && !p.data.draft;
+
 module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('inspect', (value) => {
     return util.inspect(value);
@@ -14,6 +17,11 @@ module.exports = function(eleventyConfig) {
     'aac',
     'mp3'
   ]);
+
+  eleventyConfig.addCollection('episode', (collection) => {
+    const episodes = collection.getFilteredByTag('episode');
+    return episodes.filter(isLive);
+  });
 
   // eleventyConfig.addPassthroughCopy("**/*.{aac,mp3}");
 

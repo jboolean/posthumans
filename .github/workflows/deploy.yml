@@ -5,6 +5,11 @@ on:
     branches:
     - master
 
+  # Support scheduled posts
+  schedule:
+    # 7 am EST daily
+    - cron: '0 12 * * *'
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
