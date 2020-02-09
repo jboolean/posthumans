@@ -15,7 +15,8 @@ module.exports = function(eleventyConfig) {
     'md',
     'm4a',
     'aac',
-    'mp3'
+    'mp3',
+    'jpg'
   ]);
 
   eleventyConfig.addCollection('episode', (collection) => {

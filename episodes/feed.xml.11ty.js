@@ -11,12 +11,16 @@ class FeedRenderer {
     }
   }
 
-  render(data) {    
+  render(data) {   
+    console.log(data.collections.all); 
+    const publicPath = data.site.publicPath;
+
     const feed = new Podcast({
       title: data.title,
       description: data.description,
       feedUrl: data.site.publicPath + data.page.url,
       siteUrl: data.site.publicPath,
+      imageUrl: publicPath + '/artwork.jpg',
       categories: data.categories,
       itunesCategory: data.itunesCategory,
       author: data.author,
@@ -26,6 +30,7 @@ class FeedRenderer {
       itunesType: data.itunesType,
       itunesOwner: data.itunesOwner,
       itunesExplicit: data.itunesExplicit,
+      itunesImage: publicPath + '/artwork.jpg',
       webMaster: data.webMaster,
     });
     
