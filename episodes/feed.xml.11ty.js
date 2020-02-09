@@ -18,6 +18,7 @@ class FeedRenderer {
     const feed = new Podcast({
       title: data.title,
       description: data.description,
+      language: data.language,
       feedUrl: data.site.publicPath + data.page.url,
       siteUrl: data.site.publicPath,
       imageUrl: publicPath + '/artwork.jpg',
