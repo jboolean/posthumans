@@ -4,6 +4,6 @@ layout: default
 <article>
     <h1>{{ title }}</h1>
     <p><time datetime="{{ page.date.toISOString() }}">{{ page.date.toString() }}</time></p>
-    <audio src="{{ enclosure }}" controls></audio>
+    <audio src="{{ site.filesPath + '/' + enclosure.name }}" controls></audio>
     {{ content | safe }}
 </article>

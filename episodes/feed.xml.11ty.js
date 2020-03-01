@@ -46,8 +46,9 @@ class FeedRenderer {
         itunesAuthor: episode.author,
         date: episode.date,
         enclosure: episode.data.enclosure ? {
-          url: data.site.publicPath + episode.url + episode.data.enclosure,
-          file: path.join(episode.inputPath, '../', episode.data.enclosure)
+          url: data.site.filesPath + '/' + episode.data.enclosure.name,
+          size: episode.data.enclosure.size,
+          type: episode.data.enclosure.type
         } : null
       });
     });
