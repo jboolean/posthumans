@@ -1,9 +1,8 @@
 ---
-title: Ben Zion, Transhumanist Candidate for President
+title: Ben Zion, Transhumanist Presidential Candidate
 enclosure: 
-  name: ben-zion.m4a
-  size: 30009173
-  type: 'audio/mp4'
-date: 2020-02-03 7:00:00 -5
+  name: benZion.m4a
+date: 2020-03-22 7:00:02 -5
 ---
-This is where the *show* notes go. 
+Dr. Francesca Ferrando and Julian Boilen interview Ben Zion, Transhumanist Party nominee for President of the United States in 2020.
+Recorded at Princeton University (US), November 2019. ​
