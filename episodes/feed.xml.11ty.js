@@ -1,6 +1,7 @@
 const Podcast = require('podcast');
 const striptags = require('striptags');
 const path = require('path');
+const axios = require('axios');
 
 class FeedRenderer {
   data() {
@@ -11,8 +12,7 @@ class FeedRenderer {
     }
   }
 
-  render(data) {   
-    console.log(data.collections.all); 
+  async render(data) {   
     const publicPath = data.site.publicPath;
 
     const feed = new Podcast({
@@ -34,8 +34,15 @@ class FeedRenderer {
       itunesImage: publicPath + '/artwork.jpg',
       webMaster: data.webMaster,
     });
-    
-    data.collections.episode.forEach((episode) => {
+
+    for (const episode of data.collections.episode) {
+      const url = data.site.filesPath + '/' + episode.data.enclosure.name;
+      const headResp = await axios.head(url);
+      const {
+        'content-type': contentType,
+        'content-length': contentLength
+      } = headResp.headers;
+
       feed.addItem({
         title: episode.data.title,
         description: episode.templateContent,
@@ -46,12 +53,12 @@ class FeedRenderer {
         itunesAuthor: episode.author,
         date: episode.date,
         enclosure: episode.data.enclosure ? {
-          url: data.site.filesPath + '/' + episode.data.enclosure.name,
-          size: episode.data.enclosure.size,
-          type: episode.data.enclosure.type
+          url,
+          size: contentLength,
+          type: contentType
         } : null
       });
-    });
+    }
 
     return feed.buildXml('\t');
   }
