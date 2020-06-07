@@ -3,7 +3,11 @@ layout: default
 ---
 <ol>
 {%- for episode in collections.episode -%}
-  <li><a href="{{ episode.url }}">{{ episode.data.title }}</li>
+  {% if episode.data.isLive %}
+    <li><a href="{{ episode.url }}">{{ episode.data.title }}</a></li>
+  {% else %}
+    <li><span>{{ episode.data.title }}</span></li>
+  {% endif %}
 {%- endfor -%}
 </ol>
 

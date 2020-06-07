@@ -36,6 +36,7 @@ class FeedRenderer {
     });
 
     for (const episode of data.collections.episode) {
+      if (!episode.data.isLive || !episode.data.enclosure) continue;
       const url = data.site.filesPath + '/' + episode.data.enclosure.name;
       const headResp = await axios.head(url);
       const {

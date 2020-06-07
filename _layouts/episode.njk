@@ -4,6 +4,10 @@ layout: default
 <article>
     <h1>{{ title }}</h1>
     <p><time datetime="{{ page.date.toISOString() }}">{{ page.date.toString() }}</time></p>
-    <audio src="{{ site.filesPath + '/' + enclosure.name }}" controls></audio>
+    {% if page.data.isLive %}
+        <audio src="{{ site.filesPath + '/' + enclosure.name }}" controls></audio>
+    {% else %}
+        <strong>This is an upcoming episode</strong>
+    {% endif %}
     {{ content | safe }}
 </article>

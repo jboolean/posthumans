@@ -19,11 +19,6 @@ module.exports = function(eleventyConfig) {
     'jpg'
   ]);
 
-  eleventyConfig.addCollection('episode', (collection) => {
-    const episodes = collection.getFilteredByTag('episode');
-    return episodes.filter(isLive);
-  });
-
   // eleventyConfig.addPassthroughCopy("**/*.{aac,mp3}");
 
   return {

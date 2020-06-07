@@ -9,7 +9,8 @@
 			"node_modules": true,
 			"dist": true,
 			".build": true,
-			".serverless": true
+			".serverless": true,
+			"_site": true,
 		},
 	}
 }
