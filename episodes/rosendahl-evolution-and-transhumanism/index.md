@@ -1,5 +1,5 @@
 ---
-title: Mads Rosendahl Thomsen, Literature and Posthumanism
+title: Mads Rosendahl Thomsen, Evolution and Transhumanism
 enclosure: 
   name: rosendahlEvolutionAndTranshumansm.m4a
 date: 2020-09-14 7:00:00 -5
