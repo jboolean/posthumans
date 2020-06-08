@@ -1,0 +1,16 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+
+  text-align: center;
+}
+
+.episode-list {
+  list-style: none;
+  padding: 0;
+  padding-bottom: 3rem;
+}
+
+.episode-list h2 {
+  font-size: inherit;
+}

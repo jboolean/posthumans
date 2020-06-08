@@ -21,6 +21,8 @@ module.exports = function(eleventyConfig) {
 
   // eleventyConfig.addPassthroughCopy("**/*.{aac,mp3}");
 
+  eleventyConfig.addPassthroughCopy('assets');
+
   return {
     dir: {
       layouts: '_layouts'
