@@ -30,7 +30,8 @@ jobs:
     - name: Build
       run: npm run build
       env:
-        URL: https://d20iws37zrcaba.cloudfront.net
+        URL: https://podcast.posthumans.org
+        FILES_URL: https://podcast.posthumans.org/files
       
     - name: Deploy
       uses: jboolean/s3-sync-action@master
