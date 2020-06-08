@@ -10,7 +10,7 @@ body {
 .episode-list {
   list-style: none;
   padding: 0;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 .episode-list.live li {
