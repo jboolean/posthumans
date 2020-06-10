@@ -1,5 +1,5 @@
 ---
-title: Welcome
+title: "Welcome: What is posthumanism?" 
 enclosure: 
   name: welcome.m4a
 date: 2020-06-08 7:00:00 -5
