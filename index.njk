@@ -6,7 +6,7 @@ layout: default
   {% if episode.data.isLive %}
     <li><a href="{{ episode.url }}">{{ episode.data.title }}</a></li>
   {% else %}
-    <li><span>{{ episode.data.title }}</span></li>
+    <li><span>{{ episode.data.title }} - {{episode.date}}</span></li>
   {% endif %}
 {%- endfor -%}
 </ol>
