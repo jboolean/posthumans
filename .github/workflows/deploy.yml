@@ -20,7 +20,7 @@ jobs:
         lfs: true
 
     - name: Setup node
-      uses: actions/setup-node@v1.1.0
+      uses: actions/setup-node@v1
       with:
         node-version: '10.x'
         
